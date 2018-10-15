@@ -3,36 +3,42 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 2 meta tags should come first in the head; any other head content should come *after* these tags -->
+
+    <!-- Bootstrap -->
+
+    <!-- Latest compiled and minified bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
   <link rel="stylesheet" href="style.css">
-	    {%block title%}{%endblock%}
-  <title>Home - My Webpage</title>
+  {%block title%}{%endblock%}
+  
   </head>
   <body>
     <!--nav bar-->
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>	
-          <a class="navbar-brand" href="#">My Website</a>
+          <a class="navbar-brand" href=".">My Website</a>
         </div>
-		<div id="myNavbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li {% if active_page == "home" %} class="active"{%endif%}><a href=".">Home</a></li>
-            <li {% if active_page == "Page 1" %} class="active"{%endif%}><a href="/page1">Page 1</a></li> <!-- p1 will show up in the url -->
-            <li {% if active_page == "Page 2" %} class="active"{%endif%}><a href="/page2">Page 2</a></li>
-            <li {% if active_page == "Page 3" %} class="active"{%endif%}><a href="/page3">Page 3</a></li>
+            <li {% if active_page == "Page 1" %} class="active"{%endif%}><a href="/stuff">Page 1</a></li> <!-- p1 will show up in the url -->
+            <li {% if active_page == "Page 2" %} class="active"{%endif%}><a href="/trash">Page 2</a></li>
+            <li {% if active_page == "Page 3" %} class="active"{%endif%}><a href="/mydude">Page 3</a></li>
           </ul>
-		</div>  
       </div>
     </nav>
-	    {%block title%}{%endblock%}
-    <h1>Home Page</h1>
+    
+    <!--page content-->
+    {%block content%}{%endblock%}
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
   </body>
 </html>
