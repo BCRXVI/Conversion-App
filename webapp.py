@@ -6,15 +6,15 @@ app = Flask(__name__)
 def render_main():
     return render_template('home.html')
 
-@app.route("/stuff")
+@app.route("/page1")
 def render_page1():
     return render_template('page1.html')
 
-@app.route("/trash")
+@app.route("/page2")
 def render_page2():
     return render_template('page2.html')
 
-@app.route("/mydude")
+@app.route("/page3")
 def render_page3():
     return render_template('page3.html')
     
