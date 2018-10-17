@@ -28,7 +28,7 @@ def render_responsemc():
 def render_responseUSD():
     bom = float(request.args['USD'])
     ans = bom * 0.80
-    return render_template('responseUSD.html', response=str(bom) + str(ans) + 'EUR')
+    return render_template('responseUSD.html', response=str(bom) + 'm' + str(ans) + 'EUR')
 
 @app.route("/responseLBKG")
 def render_responseLBKG():
