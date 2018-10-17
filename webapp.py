@@ -23,6 +23,18 @@ def render_responsemc():
     bom = float(request.args['mk'])
     ans = bom * 1.609
     return render_template('responsemc.html', response=ans)
+
+@app.route("/responsemc")
+def render_responsemc():
+    bom = float(request.args['mk'])
+    ans = bom * 1.609
+    return render_template('responsemc.html', response=ans)
+
+@app.route("/responsemc")
+def render_responsemc():
+    bom = float(request.args['mk'])
+    ans = bom * 1.609
+    return render_template('responsemc.html', response=ans)
     
 if __name__=="__main__":
     app.run(debug=False, port=54321)
