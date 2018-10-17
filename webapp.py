@@ -24,17 +24,17 @@ def render_responsemc():
     ans = bom * 1.609
     return render_template('responsemc.html', response=ans)
 
-@app.route("/responsemc")
+@app.route("/responseUSD")
 def render_responsemc():
-    bom = float(request.args['mk'])
-    ans = bom * 1.609
-    return render_template('responsemc.html', response=ans)
+    bom = float(request.args['USD'])
+    ans = bom * 0.80
+    return render_template('responseUSD.html', response=ans)
 
-@app.route("/responsemc")
+@app.route("/responseLBKG")
 def render_responsemc():
-    bom = float(request.args['mk'])
-    ans = bom * 1.609
-    return render_template('responsemc.html', response=ans)
+    bom = float(request.args['Lbs'])
+    ans = bom / 2.205
+    return render_template('responseLBKG.html', response=ans)
     
 if __name__=="__main__":
     app.run(debug=False, port=54321)
