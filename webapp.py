@@ -20,7 +20,7 @@ def render_page3():
 
 @app.route("/responsemc")
 def render_responsemc():
-    bom = float(request.args["mk"])
+    bom = float(request.args['mk'])
     ans = bom * 1.609
     return render_template('responsemc.html', response = ans)
     
