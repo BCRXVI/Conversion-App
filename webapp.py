@@ -25,13 +25,13 @@ def render_responsemc():
     return render_template('responsemc.html', response=ans)
 
 @app.route("/responseUSD")
-def render_responsemc():
+def render_responseUSD():
     bom = float(request.args['USD'])
     ans = bom * 0.80
     return render_template('responseUSD.html', response=ans)
 
 @app.route("/responseLBKG")
-def render_responsemc():
+def render_responseLBKG():
     bom = float(request.args['Lbs'])
     ans = bom / 2.205
     return render_template('responseLBKG.html', response=ans)
