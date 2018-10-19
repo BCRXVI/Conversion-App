@@ -22,7 +22,7 @@ def render_page3():
 def render_responsemc():
     bom = float(request.args['mk'])
     ans = bom * 1.609
-    return render_template('responsemc.html', response=str(bom) + 'm' + '=' + str(ans) + 'km')
+    return render_template('responsemc.html', response=str(bom) + 'miles' + ' ' + '=' + ' ' + str(ans) + 'km')
 
 @app.route("/responseUSD")
 def render_responseUSD():
