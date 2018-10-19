@@ -3,7 +3,20 @@
   <head>
     <title>Response</title>
   </head>
-  <body>
+  <body><!--nav bar-->
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+      <div class="navbar-header">
+          <a class="navbar-brand" href=".">My Website</a>
+      </div>
+          <ul class="nav navbar-nav">
+            <li {% if active_page == "Home" %} class="active"{%endif%}><a href=".">Home</a></li>
+            <li {% if active_page == "Page 1" %} class="active"{%endif%}><a href="/page1">Page 1</a></li>
+            <li {% if active_page == "Page 2" %} class="active"{%endif%}><a href="/page2">Page 2</a></li>
+            <li {% if active_page == "Page 3" %} class="active"{%endif%}><a href="/page3">Page 3</a></li>
+          </ul>
+      </div>
+    </nav>
     <h1>Response:</h1>
     <p>{{ response }}</p>
   </body>
