@@ -34,7 +34,7 @@ def render_responseUSD():
 def render_responseLBKG():
     bom = float(request.args['Lbs'])
     ans = bom / 2.205
-    return render_template('responseLBKG.html', response=str(bom) + str(ans) + 'kg')
+    return render_template('responseLBKG.html', response=str(bom) + ' lbs' + ' = ' + str(ans) + ' kg')
     
 if __name__=="__main__":
     app.run(debug=False, port=54321)
